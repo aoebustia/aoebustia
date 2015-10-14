@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="css/bootstrap-theme.css">
+
+    <script src="js/jquery-2.1.4.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="js/bootstrap.js"></script>
+
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab&subset=latin,vietnamese' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    <button id="button1" class="btn btn-danger">
+        <span class="glyphicon glyphicon-home"></span> Home
+    </button>
+    <button id="button3" class="btn btn-danger">
+        <i class="fa fa-home"></i> Trang chu
+    </button>
+
+    <p style="font-family: 'Lobster', cursive;">
+        Hello World, Hello Fonts
+    </p>
+    <button id="button2" class="btn btn-success">Calculate</button>
+    <input id="firstname" class="form-control" value="Hello" type="text"/>
+    <input id="lastname" class="form-control" value="World" type="text"/>
+
+    <script>
+        $("input").hide();
+
+        $("#button1").click(function(){
+            $("input").show();
+            $("#firstname").val("Xin chao");
+            $("#lastname").val("The Gioi");
+        });
+
+        $("#button2").click(function(){
+            var num1 = $("#firstname").val();
+            var num2 = $("#lastname").val();
+
+            var result = parseInt(num1) + parseInt(num2);
+            alert(result);
+        });
+    </script>
+</body>
+</html>
